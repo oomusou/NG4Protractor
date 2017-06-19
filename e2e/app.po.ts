@@ -2,10 +2,11 @@ import { browser, by, element } from 'protractor';
 
 export class NG4ProtractorPage {
   navigateTo() {
-    return browser.get('/');
+    browser.waitForAngularEnabled(false);
+    return browser.get('http://127.0.0.1:8000/');
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.className('title m-b-md')).getText();
   }
 }

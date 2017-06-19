@@ -7,8 +7,8 @@ describe('ng4-protractor App', () => {
     page = new NG4ProtractorPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Laravel', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('Laravel');
   });
 });
